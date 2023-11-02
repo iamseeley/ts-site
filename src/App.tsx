@@ -7,11 +7,13 @@ import Projects from './pages/projects';
 import Header from './components/header';
 import Footer from './components/footer';
 import Cv from './pages/cv';
+import { HelmetProvider } from 'react-helmet-async';
 
 
 function App() {
 
   return (
+    <HelmetProvider>
     <Router>
       <div>
       <Header />
@@ -26,6 +28,7 @@ function App() {
       <Footer />
       </div>
     </Router>
+    </HelmetProvider>
   )
 }
 

@@ -4,7 +4,8 @@ import { Link } from "react-router-dom"
 interface PostProps {
     date: string,
     title: string,
-    link: string
+    link: string,
+    body?: string
 }
 
 function Post({date, title, link}: PostProps) {
