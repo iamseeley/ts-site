@@ -1,0 +1,156 @@
+/* Global Reset (As discussed, specific elements have been reset) */
+body, h1, h2, h3, h4, p, ul, li, a {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+:root {
+  --primary-color: #333; /* You can adjust these variables */
+  --secondary-color: #555;
+  --bg-color: #f9f9f9;
+  --button-bg: #fff;
+  --button-border: #ddd;
+}
+
+body {
+  margin: auto;
+  max-width: 624px;
+  font-family: Arial, sans-serif; /* Adjust to your preferred font */
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+  padding: 40px; /* Providing some spacing around */
+}
+
+section {
+  margin-top: 40px;
+}
+
+ h4, p {
+  color: var(--secondary-color);
+}
+
+h2 {
+  font-size: 24px; /* Adjust based on your design's need */
+  margin-bottom: 8px;
+}
+
+h3 {
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+h4 {
+  font-weight: normal;
+  font-size: 16px;
+ 
+}
+
+.canvas-container {
+  margin-left: -20px;
+  padding: 0;
+  padding-left: 0px;
+  display: flex;
+  height: 100px;
+}
+
+.post {
+  display: flex;
+  gap: 24px;
+}
+
+time {
+  color: var(--secondary-color)
+}
+
+button {
+  color: var(--secondary-color);
+  background-color: var(--button-bg);
+  border: 1px solid var(--button-border);
+  padding: 15px 30px;
+  margin: 10px 0;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+}
+
+.container {
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  margin-bottom: 40px;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  margin-top: 80px;
+  align-items: center;
+}
+
+footer p {
+  color: var(--primary-color);
+}
+
+footer img {
+  opacity: 80%;
+}
+
+footer img:hover {
+  opacity: 100%;
+}
+
+.social-links {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.about {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+ 
+}
+
+hr {
+  border: 2px dotted --button-border;
+  border-style: none none dotted; 
+  text-align: center;
+  color: var(--button-border);
+  
+  margin-top: 20px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  margin: 10px 0;
+}
+
+a {
+  color: var(--primary-color);
+  transition: color 0.3s;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: black;
+}
