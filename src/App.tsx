@@ -6,7 +6,6 @@ import Posts from './pages/posts';
 import Projects from './pages/projects';
 import Header from './components/header';
 import Footer from './components/footer';
-import Cv from './pages/cv';
 import { HelmetProvider } from 'react-helmet-async';
 
 
@@ -22,7 +21,7 @@ function App() {
         <Route path='/' Component={Home} />
         <Route path='/posts' Component={Posts} />
         <Route path='/projects' Component={Projects} />
-        <Route path='/cv' Component={Cv} />
+        <Route path="/cv.pdf"  />
       </Routes>
       </main>
       <Footer />

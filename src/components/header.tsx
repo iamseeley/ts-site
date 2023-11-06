@@ -14,7 +14,7 @@ function Header() {
                 <Link rel="noopener noreferrer" to={'https://github.com/iamseeley'} target="_blank">github</Link>
                 <Link rel="noopener noreferrer" to={'https://twitter.com/iamseeley'} target="_blank">twitter</Link>
                 <Link rel="noopener noreferrer" to={'https://www.linkedin.com/in/thomas-seeley-3229b5205/'}>linkedin</Link>
-                <Link rel="noopener noreferrer" to={''}>cv</Link>
+                <Link rel="noopener noreferrer" target="_blank" to={'/cv.pdf'}>cv</Link>
                 <Link rel="noopener noreferrer" to={'mailto:hello@tseeley.com'} target="_blank">email</Link>
             </div>
             {/* <ul>
