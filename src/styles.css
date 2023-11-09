@@ -8,6 +8,7 @@ body, h1, h2, h3, h4, p, ul, li, a {
 :root {
   --primary-color: #333; /* You can adjust these variables */
   --secondary-color: #555;
+  --tertiary-color: #7F7FFF;
   --bg-color: #f9f9f9;
   --button-bg: #fff;
   --button-border: #ddd;
@@ -146,11 +147,12 @@ li {
 }
 
 a {
-  color: var(--primary-color);
+  color: var(--tertiary-color);
   transition: color 0.3s;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 a:hover {
-  color: black;
+  /* color: black; */
+  text-decoration: underline;
 }
