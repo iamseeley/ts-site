@@ -61,10 +61,11 @@ h4 {
 }
 
 time {
+  
   font-size: 14px;
   font-family: monospace;
   color: var(--secondary-color);
-  /* line-height: 16px; */
+  line-height: 16px;
 }
 
 /* .post-item a {
@@ -79,6 +80,10 @@ time {
   gap:24px;
   margin-bottom: 4px;
 }
+
+/* .post-item a {
+  line-height: 21px;
+} */
 
 .post-item p {
   color: #7F7FFF;
@@ -160,6 +165,7 @@ hr {
 
 ul {
   list-style-type: none;
+  font-size: 16px;
 }
 
 li {
