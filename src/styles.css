@@ -67,9 +67,10 @@ time {
   /* line-height: 16px; */
 }
 
-.post-item a {
+/* .post-item a {
   line-height: 20px;
-}
+} */
+
 
 
 .post-item {
@@ -162,7 +163,7 @@ ul {
 }
 
 li {
-  margin: 10px 0;
+  margin: 6px 0;
 }
 
 a {
