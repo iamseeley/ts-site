@@ -4,6 +4,7 @@ import ReactMarkdown from 'react-markdown';
 import { PostContent } from '../types';
 import { Helmet } from 'react-helmet-async';
 import rehypeRaw from 'rehype-raw';
+import { motion } from 'framer-motion';
 
 interface Params {
   [key: string]: string;
@@ -39,13 +40,17 @@ const PostPage: React.FC = () => {
       <title>Thomas Seeley - {postContent.title}</title>
       <meta name='description' content={postContent.description} />
     </Helmet>
-    <article>
+    <motion.article
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    
+    >
       <div className='article-header'>
       <h2>{postContent.title}</h2>
       <time>{postContent.date}</time>
       </div>
       <ReactMarkdown rehypePlugins={[rehypeRaw]}>{postContent.content}</ReactMarkdown>
-    </article>
+    </motion.article>
     </>
   );
 };
