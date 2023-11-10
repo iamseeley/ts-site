@@ -8,5 +8,10 @@ export default [
     "filename": "new-post",
     "title": "New Post",
     "date": "2023-11-10"
+  },
+  {
+    "filename": "post",
+    "title": "New Post",
+    "date": "2023-11-10"
   }
 ];

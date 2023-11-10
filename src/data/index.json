@@ -2,5 +2,5 @@
   "title": "My First Post",
   "date": "2023-11-10",
   "description": "This is my first post.",
-  "content": "\n## This is my first post\n\nHello, this is the content of my first post.\n"
+  "content": "\n## This is my first post\n\nHello, this is the content of my first post.\n\n\n![image](/assets/images/react.svg)\n\nImage test"
 }
