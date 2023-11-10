@@ -1,48 +1,41 @@
-// src/components/PostPage.tsx
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import  { marked } from 'marked';
+import ReactMarkdown from 'react-markdown';
+import { PostContent } from '../types';
+
+interface Params {
+  [key: string]: string;
+}
+
 
 const PostPage: React.FC = () => {
-  const [content, setContent] = useState<string | null>(null);
-  const { slug } = useParams<{ slug: string }>();
+  const { slug } = useParams<Params>();
+  const [postContent, setPostContent] = useState<PostContent | null>(null);
 
   useEffect(() => {
     if (slug) {
-      // Adjust the path to where your markdown files are served from
-      const markdownFilePath = `/content/posts/${slug}.md`;
+      const loadPost = async () => {
+        try {
+          const module = await import(`../data/${slug}.json`);
+          setPostContent(module.default as PostContent);
+        } catch (error) {
+          console.error('Post not found:', error);
+        }
+      };
 
-      // Fetch the markdown file content
-      fetch(markdownFilePath)
-        .then((response) => {
-          if (!response.ok) {
-            throw new Error('Network response was not ok');
-          }
-          return response.text();
-        })
-        .then((text) => {
-          // Use marked to convert markdown to HTML
-          setContent(marked(text));
-        })
-        .catch((error) => {
-          console.error('Fetching markdown failed: ', error);
-          setContent('Failed to load post content.');
-        });
+      loadPost();
     }
   }, [slug]);
 
-  if (!slug) {
-    return <div>Post slug not provided.</div>;
-  }
-
-  if (!content) {
+  if (!postContent) {
     return <div>Loading...</div>;
   }
 
-  // Render the HTML content in a div with dangerouslySetInnerHTML
   return (
     <article>
-      <div dangerouslySetInnerHTML={{ __html: content }} />
+      <h2>{postContent.title}</h2>
+      <time>{postContent.date}</time>
+      <ReactMarkdown>{postContent.content}</ReactMarkdown>
     </article>
   );
 };

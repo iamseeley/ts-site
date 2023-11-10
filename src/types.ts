@@ -8,8 +8,8 @@ export interface PostProps {
   }
   
   export interface PostContent {
-    html: string;
-    frontmatter: {
-      [key: string]: any; // Adjust this to match your frontmatter structure
-    };
+    title: string;
+    date: string;
+    description: string;
+    content: string;
   }

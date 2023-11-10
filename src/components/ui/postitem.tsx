@@ -1,20 +1,25 @@
-import { Link } from "react-router-dom"
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-
-interface PostProps {
-    date: string,
-    title: string,
-    link: string,
-    body?: string
+interface PostItemProps {
+  filename: string;
+  title: string;
+  date: string;
 }
 
-function PostItem({date, title, link}: PostProps) {
-    return(
-        <li className="post">
-            <time>{date}</time>
-            <Link target="_blank" rel="noopener noreferrer" to={link}>{title}</Link>
-        </li>
-    )
-}
+const PostItem: React.FC<PostItemProps> = ({ filename, title, date }) => {
+  return (
+    <>
+    <li className='post-item'>
+      
+      <time>{date}</time>
+      
+      
+      <Link to={`/posts/${filename}`}><strong>{title}</strong></Link>
+      
+      </li>
+    </>
+  );
+};
 
-export default PostItem
+export default PostItem;
