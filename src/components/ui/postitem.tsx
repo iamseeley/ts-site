@@ -8,7 +8,7 @@ interface PostProps {
     body?: string
 }
 
-function Post({date, title, link}: PostProps) {
+function PostItem({date, title, link}: PostProps) {
     return(
         <li className="post">
             <time>{date}</time>
@@ -17,4 +17,4 @@ function Post({date, title, link}: PostProps) {
     )
 }
 
-export default Post
+export default PostItem

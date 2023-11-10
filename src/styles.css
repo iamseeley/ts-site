@@ -156,3 +156,15 @@ a:hover {
   /* color: black; */
   text-decoration: underline;
 }
+
+/* .outgoing {
+  margin-left: 2px;
+  padding: 4px 8px;
+  background-color: rgb(225, 225, 225);
+  border-radius: 8px;
+} */
+
+
+article div h1 {
+  margin-bottom: 4px;
+}

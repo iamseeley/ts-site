@@ -7,7 +7,7 @@ interface ProjectProps {
 }
 
 
-function Project({title, description, link}: ProjectProps) {
+function ProjectItem({title, description, link}: ProjectProps) {
     return(
         <li>
             <Link target="_blank" rel="noopener noreferrer" to={link}><strong>{title}</strong></Link>: {description}
@@ -15,4 +15,4 @@ function Project({title, description, link}: ProjectProps) {
     )
 }
 
-export default Project
+export default ProjectItem

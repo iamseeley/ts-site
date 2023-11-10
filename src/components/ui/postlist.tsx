@@ -1,4 +1,4 @@
-import Post from "./post"
+import PostItem from "./postitem"
 
 
 function PostList() {
@@ -7,7 +7,7 @@ function PostList() {
             <section>
                 <h3>Posts</h3>
                 <ul>
-                <Post date="soon..." link="/home" title="time to build" />
+                <PostItem  date="soon..." link="/home" title="time to build" />
                 
                 </ul>
            </section> 
