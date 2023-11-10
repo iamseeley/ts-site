@@ -72,7 +72,19 @@ time {
   line-height: 20px;
 } */
 
+article h3 {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
 
+article p {
+  margin-top: 12px;
+  line-height: 1.5;
+}
+
+.article-header {
+  margin-bottom: 24px;
+}
 
 .post-item {
   display: flex;
