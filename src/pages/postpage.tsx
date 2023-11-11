@@ -10,7 +10,6 @@ interface Params {
   [key: string]: string;
 }
 
-
 const PostPage: React.FC = () => {
   const { slug } = useParams<Params>();
   const [postContent, setPostContent] = useState<PostContent | null>(null);
@@ -31,26 +30,28 @@ const PostPage: React.FC = () => {
   }, [slug]);
 
   if (!postContent) {
-    return <div>Loading...</div>;
+    // Optionally, you can return null or some placeholder here
+    // if you don't want to render anything while postContent is null.
+    return null;
   }
 
   return (
     <>
-    <Helmet>
-      <title>Thomas Seeley - {postContent.title}</title>
-      <meta name='description' content={postContent.description} />
-    </Helmet>
-    <motion.article
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    
-    >
-      <div className='article-header'>
-      <h2>{postContent.title}</h2>
-      <time>{postContent.date}</time>
-      </div>
-      <ReactMarkdown rehypePlugins={[rehypeRaw]}>{postContent.content}</ReactMarkdown>
-    </motion.article>
+      <Helmet>
+        <title>Thomas Seeley - {postContent.title}</title>
+        <meta name='description' content={postContent.description} />
+      </Helmet>
+      <motion.article
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{delay: .2}}
+      >
+        <div className='article-header'>
+          <h2>{postContent.title}</h2>
+          <time>{postContent.date}</time>
+        </div>
+        <ReactMarkdown rehypePlugins={[rehypeRaw]}>{postContent.content}</ReactMarkdown>
+      </motion.article>
     </>
   );
 };
