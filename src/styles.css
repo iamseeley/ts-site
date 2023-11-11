@@ -73,12 +73,12 @@ time {
 } */
 
 article h3 {
-  margin-top: 16px;
+  margin-top: 20px;
   margin-bottom: 14px;
 }
 
 main img {
-
+  margin-bottom: 10px;
   display: inline-block;
   max-width: 100%;
   

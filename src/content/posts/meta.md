@@ -20,3 +20,12 @@ This is an image:
 
 
 <img src="/assets/images/starvan.jpg" />
+
+**This is some bold text.**
+
+*This is some italic text.*
+
+### Another One
+
+
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Here's a little [link](/) hiding. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
