@@ -11,26 +11,12 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-
-
-<!-- - Spinach
-- Mushrooms
-- Garlic
-
-<!-- <ol>
-    <li>Spinach</li>
-    <li>Mushrooms</li>
-    <li>Garlic</li>
-<ol> -->
-
-
-<!-- This is an image:
-
-![react](/assets/images/react.svg)
-
-
-
 This is a code block:
 ```python
 print("pizza pie")
-``` -->
+```
+
+This is an image:
+
+
+<img src="/assets/images/starvan.jpg" />

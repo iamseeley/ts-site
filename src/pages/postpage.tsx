@@ -46,7 +46,7 @@ const PostPage: React.FC = () => {
         <article>
         <div className='article-header'>
           <h2>{postContent.title}</h2>
-          <time>Thomas &#8212; {postContent.date}</time>
+          <time>TS ~ {postContent.date}</time>
         </div>
         <ReactMarkdown rehypePlugins={[rehypeRaw]}>{postContent.content}</ReactMarkdown>
         </article>

@@ -77,13 +77,29 @@ article h3 {
   margin-bottom: 14px;
 }
 
+main img {
+
+  display: inline-block;
+  max-width: 100%;
+  
+}
+
 article p {
+  color: #333;
   margin-top: 12px;
+  margin-bottom: 12px;
   line-height: 1.5;
 }
 
 .article-header {
   margin-bottom: 16px;
+}
+
+article pre {
+  margin-top: 12px;
+  background-color: #e1e1e1;
+  padding: 12px;
+  border-radius: 4px;
 }
 
 .post-item {
