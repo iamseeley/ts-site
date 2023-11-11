@@ -5,6 +5,7 @@ import { PostContent } from '../types';
 import { Helmet } from 'react-helmet-async';
 import rehypeRaw from 'rehype-raw';
 import { motion } from 'framer-motion';
+import Footer from '../components/footer';
 
 interface Params {
   [key: string]: string;
@@ -51,6 +52,7 @@ const PostPage: React.FC = () => {
           <time>{postContent.date}</time>
         </div>
         <ReactMarkdown rehypePlugins={[rehypeRaw]}>{postContent.content}</ReactMarkdown>
+        <Footer />
       </motion.article>
     </>
   );

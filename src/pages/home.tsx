@@ -2,6 +2,7 @@ import PostList from "../components/ui/postlist"
 import ProjectList from "../components/ui/projectlist"
 import { motion } from "framer-motion";
 import Header from "../components/header";
+import Footer from "../components/footer";
 
 function Home() {
     
@@ -22,6 +23,7 @@ function Home() {
             >
             
             </motion.section> */}
+            <Footer />
             </motion.div>
         </>
     )

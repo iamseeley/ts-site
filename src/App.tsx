@@ -3,7 +3,7 @@ import './styles.css'
 import { BrowserRouter as Router } from 'react-router-dom';
 
 import AnimatedRoutes from './components/animatedroutes';
-import Footer from './components/footer';
+
 import { HelmetProvider } from 'react-helmet-async';
 
 
@@ -21,7 +21,7 @@ function App() {
       <main>
         <AnimatedRoutes />
       </main>
-      <Footer />
+      
       </div>
 
       
