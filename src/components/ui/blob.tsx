@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import p5 from 'p5';
+import { Link } from 'react-router-dom';
 
 function BlobComponent() {
     const containerRef = useRef<HTMLDivElement | null>(null);
@@ -49,7 +50,7 @@ function BlobComponent() {
 }
   }, []);
 
-  return <div ref={containerRef} className='canvas-container' />;
+  return <Link to={'/'}><div  ref={containerRef} className='canvas-container' /></Link>;
 }
 
 export default BlobComponent;

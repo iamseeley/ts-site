@@ -6,6 +6,7 @@ import { Helmet } from 'react-helmet-async';
 import rehypeRaw from 'rehype-raw';
 import Footer from '../components/footer';
 import { MotionLayout } from '../components/motionlayout';
+import PostHeader from '../components/postheader';
 
 interface Params {
   [key: string]: string;
@@ -43,6 +44,7 @@ const PostPage: React.FC = () => {
         <meta name='description' content={postContent.description} />
       </Helmet>
       <MotionLayout>
+        <PostHeader />
         <article>
         <div className='article-header'>
           <h2>{postContent.title}</h2>

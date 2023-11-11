@@ -55,6 +55,21 @@ h4 {
   height: 100px;
 }
 
+canvas {
+  cursor: pointer;
+}
+
+.article-blob {
+  display: block;
+  margin-left: -10px;
+  padding: 0;
+  padding-left: 0px;
+  display: flex;
+  height: 75px;
+}
+
+
+
 .post {
   display: flex;
   gap: 20px;
@@ -72,13 +87,17 @@ time {
   line-height: 20px;
 } */
 
+.post-header {
+  margin-bottom: 24px;
+}
+
 article h3 {
   margin-top: 20px;
   margin-bottom: 14px;
 }
 
 main img {
-  margin-bottom: 10px;
+ 
   display: inline-block;
   max-width: 100%;
   
