@@ -9,7 +9,7 @@ import PostPage from "../pages/postpage";
 function AnimatedRoutes () {
   const location = useLocation();
   return (
-    <AnimatePresence mode="wait">
+    <AnimatePresence mode="wait" onExitComplete={() => window.scrollTo(0,0)}>
     <Routes key={location.pathname} location={location}>
         <Route path='/' Component={Home} />
         <Route path='/posts' Component={Posts} />
