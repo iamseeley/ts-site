@@ -1,7 +1,7 @@
 export default [
   {
     "filename": "intro",
-    "title": "Introduction",
+    "title": "Intro",
     "date": "2023-11-10"
   },
   {

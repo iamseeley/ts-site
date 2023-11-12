@@ -1,5 +1,5 @@
 ---
-title: "Introduction"
+title: "Intro"
 date: "2023-11-10"
 description: "Introducing Thomas Seeley and tseeley.com"
 ---
