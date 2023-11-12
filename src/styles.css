@@ -124,6 +124,7 @@ article pre {
 .post-item {
   display: flex;
   flex-direction: row;
+  align-items: baseline;
   gap:24px;
   margin-bottom: 4px;
 }

@@ -1,15 +1,19 @@
 import { useEffect, useRef } from 'react';
 import p5 from 'p5';
-import { Link } from 'react-router-dom';
+import {  useNavigate } from 'react-router-dom';
+
 
 function BlobComponent() {
+    const navigate= useNavigate();
+
     const containerRef = useRef<HTMLDivElement | null>(null);
   let sketch = (p: p5) => {
     let points: p5.Vector[] = [];
     let noiseOffset = 0;
+    // let blobCenter = p.createVector(50, 50);
 
     p.setup = () => {
-      p.createCanvas(100, 100);
+      const canvas = p.createCanvas(100, 100);
       let resolution = 100;
       let angle = p.TWO_PI / resolution;
 
@@ -19,6 +23,10 @@ function BlobComponent() {
         let point = p.createVector(x, y);
         points.push(point);
       }
+
+      canvas.mouseClicked(() => {
+        navigate('/'); // Navigate on canvas click
+    });
     };
 
     p.draw = () => {
@@ -37,6 +45,12 @@ function BlobComponent() {
       }
 
       p.endShape(p.CLOSE);
+
+    //   if (p.mouseX > 0 && p.mouseX < p.width && p.mouseY > 0 && p.mouseY < p.height) {
+    //     let mouse = p.createVector(p.mouseX, p.mouseY);
+    //     blobCenter.lerp(mouse, 0.02); // Interpolate towards mouse position
+    // }
+
       noiseOffset += 0.005;
     };
   };
@@ -50,7 +64,9 @@ function BlobComponent() {
 }
   }, []);
 
-  return <Link to={'/'}><div  ref={containerRef} className='canvas-container' /></Link>;
+  return <div  ref={containerRef} className='canvas-container' />;
 }
 
 export default BlobComponent;
+
+
