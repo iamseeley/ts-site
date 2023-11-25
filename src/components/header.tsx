@@ -8,7 +8,7 @@ function Header() {
             <div>
             <BlobComponent />
             <h2>Thomas Seeley</h2>
-            <h4>developer . designer</h4>
+            {/* <h4>developer . designer</h4> */}
             </div>
             <div className="social-links">
                 <Link rel="noopener noreferrer" to={'https://github.com/iamseeley'} target="_blank">github</Link>
