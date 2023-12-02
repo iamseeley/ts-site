@@ -1,41 +1,34 @@
-
 const fs = require('fs');
 const path = require('path');
 const matter = require('gray-matter');
 
 function convertMarkdownToJson(srcDir, outputDir) {
-  console.log(`Source Directory: ${srcDir}`);
-  console.log(`Output Directory: ${outputDir}`);
-  // Ensure the output directory exists
+  console.log(`Converting from ${srcDir} to ${outputDir}`);
+  
   if (!fs.existsSync(outputDir)) {
     fs.mkdirSync(outputDir, { recursive: true });
   }
 
-  // Read all markdown files from the source directory
   const files = fs.readdirSync(srcDir).filter(file => file.endsWith('.md'));
 
   files.forEach(file => {
     const filePath = path.join(srcDir, file);
     const fileContents = fs.readFileSync(filePath, 'utf-8');
-    
-    // Parse the markdown file
     const { data, content } = matter(fileContents);
 
-    // Create an object to be saved as JSON
-    const postObject = {
-      ...data,
-      content
-    };
-
-    // Write the JSON file
-    fs.writeFileSync(
-      path.join(outputDir, file.replace('.md', '.json')),
-      JSON.stringify(postObject, null, 2)
-    );
+    const object = { ...data, content };
+    
+    const outputFileName = file.replace('.md', '.json');
+    fs.writeFileSync(path.join(outputDir, outputFileName), JSON.stringify(object, null, 2));
   });
 }
 
-// Usage
-const srcDir = path.join('src/content/posts'); // Directory where your markdown files are located
-const outputDir = path.join('src/data'); // Output directory for JSON files
-convertMarkdownToJson(srcDir, outputDir);
+// Usage for posts
+const postsSrcDir = path.join('src/content/posts');
+const postsOutputDir = path.join('src/data/posts');
+convertMarkdownToJson(postsSrcDir, postsOutputDir);
+
+// Usage for projects
+const projectsSrcDir = path.join('src/content/projects');
+const projectsOutputDir = path.join('src/data/projects');
+convertMarkdownToJson(projectsSrcDir, projectsOutputDir);

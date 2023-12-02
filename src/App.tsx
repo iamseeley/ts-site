@@ -1,7 +1,7 @@
 
 import './styles.css'
 import { BrowserRouter as Router } from 'react-router-dom';
-import AnimatedRoutes from './components/animatedroutes';
+import AnimatedRoutes from './components/AnimatedRoutes';
 import { HelmetProvider } from 'react-helmet-async';
 
 

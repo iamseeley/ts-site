@@ -1,8 +1,8 @@
-import PostList from "../components/ui/postlist"
-import ProjectList from "../components/ui/projectlist"
-import Header from "../components/header";
-import Footer from "../components/footer";
-import { MotionLayout } from "../components/motionlayout";
+import PostList from "../components/ui/PostList"
+import ProjectList from "../components/ui/ProjectList"
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import { MotionLayout } from "../components/MotionLayout";
 import { Helmet } from "react-helmet-async";
 
 function Home() {

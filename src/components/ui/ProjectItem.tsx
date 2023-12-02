@@ -9,9 +9,12 @@ interface ProjectProps {
 
 function ProjectItem({title, description, link}: ProjectProps) {
     return(
-        <li>
-            <Link target="_blank" rel="noopener noreferrer" to={link}><strong>{title}</strong></Link><span className="project-span">:</span> {description}
-        </li>
+        <ul className="project-item">
+            <li><Link target="_blank" rel="noopener noreferrer" to={link}><strong>{title}</strong></Link></li>
+            <li>
+               {description}
+            </li>
+        </ul>
     )
 }
 

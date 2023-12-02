@@ -4,9 +4,9 @@ import ReactMarkdown from 'react-markdown';
 import { PostContent } from '../types';
 import { Helmet } from 'react-helmet-async';
 import rehypeRaw from 'rehype-raw';
-import Footer from '../components/footer';
-import { MotionLayout } from '../components/motionlayout';
-import PostHeader from '../components/postheader';
+import Footer from '../components/Footer';
+import { MotionLayout } from '../components/MotionLayout';
+import PostHeader from '../components/PostHeader';
 
 interface Params {
   [key: string]: string;
@@ -20,7 +20,7 @@ const PostPage: React.FC = () => {
     if (slug) {
       const loadPost = async () => {
         try {
-          const module = await import(`../data/${slug}.json`);
+          const module = await import(`../data/posts/${slug}.json`);
           setPostContent(module.default as PostContent);
         } catch (error) {
           console.error('Post not found:', error);
@@ -32,8 +32,6 @@ const PostPage: React.FC = () => {
   }, [slug]);
 
   if (!postContent) {
-    // Optionally, you can return null or some placeholder here
-    // if you don't want to render anything while postContent is null.
     return null;
   }
 

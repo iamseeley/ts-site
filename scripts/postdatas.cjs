@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const dataDir = path.join('src', 'data');
+const dataDir = path.join('src', 'data', 'posts');
 const output = path.join( 'src', 'data', 'postdatas.ts');
 
 const postFiles = fs.readdirSync(dataDir).filter(file => file.endsWith('.json'));

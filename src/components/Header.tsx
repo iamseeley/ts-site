@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom"
-import BlobComponent from "./ui/blob"
+
 
 
 function Header() {
     return(
         <header>
             <div>
-            <BlobComponent />
+            
             <h2>Thomas Seeley</h2>
             {/* <h4>developer . designer</h4> */}
             </div>
