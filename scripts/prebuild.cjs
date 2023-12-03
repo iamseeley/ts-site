@@ -32,3 +32,43 @@ convertMarkdownToJson(postsSrcDir, postsOutputDir);
 const projectsSrcDir = path.join('src/content/projects');
 const projectsOutputDir = path.join('src/data/projects');
 convertMarkdownToJson(projectsSrcDir, projectsOutputDir);
+
+
+const projectDataDir = path.join('src', 'data', 'projects');
+const projectOutput = path.join( 'src', 'data', 'projectdatas.ts');
+
+const projectFiles = fs.readdirSync(projectDataDir).filter(file => file.endsWith('.json'));
+
+const projectDatas = projectFiles.map(file => {
+  const filePath = path.join(projectDataDir, file);
+  const content = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+  return {
+    filename: file.replace('.json', ''),
+    title: content.title,
+    description: content.description,
+    link: content.link,
+  };
+});
+
+fs.writeFileSync(projectOutput, `export default ${JSON.stringify(projectDatas, null, 2)};`);
+
+
+
+const postDataDir = path.join('src', 'data', 'posts');
+const postOutput = path.join( 'src', 'data', 'postdatas.ts');
+
+const postFiles = fs.readdirSync(postDataDir).filter(file => file.endsWith('.json'));
+
+const postsDatas = postFiles.map(file => {
+  const filePath = path.join(postDataDir, file);
+  const content = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+  return {
+    filename: file.replace('.json', ''),
+    title: content.title,
+    date: content.date
+  };
+});
+
+fs.writeFileSync(postOutput, `export default ${JSON.stringify(postsDatas, null, 2)};`);
+
+
