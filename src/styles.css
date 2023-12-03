@@ -6,7 +6,7 @@ body, h1, h2, h3, h4, p, ul, li, a {
 }
 
 :root {
-  --primary-color: #333; /* You can adjust these variables */
+  --primary-color: #111; /* You can adjust these variables */
   --secondary-color: #555;
   --tertiary-color: #7F7FFF;
   --bg-color: #f9f9f9;
